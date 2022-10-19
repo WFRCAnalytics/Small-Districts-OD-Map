@@ -1,2 +1,2 @@
 # Small-Districts-OD-Map
-Small Districts OD Map web application
+This contains the web application for the Small Districts OD Map found at https://wfrc.org/small-districts-od-map/
