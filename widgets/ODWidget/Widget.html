@@ -1,0 +1,223 @@
+<div>
+    <table>
+        <!--HIDDEN UNTIL WORKING WITH CENTERS-->
+        <tr>
+            <td>
+                <div style="display: none; line-height: 200%;" ><strong>Geography:</strong></div>
+            </td>
+            <td>
+                <div style="display: none" id="cmbGeo" data-dojo-type="dojox.form.Select"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br/>
+            </td>
+        </tr>
+        <tbody id="divCenterSelection" style="display: none;" >
+            <tr>
+                <td>
+                    <div><strong>Center:</strong></div>
+                </td>
+                <td>
+                    <div style="display: inline" id="cmbCenter" data-dojo-type="dojox.form.Select"></div><div id="SG_Zoom" style="text-align: right; padding: 1px; display: inline; line-height: 150%;">&nbsp;<input type="checkbox" id="chkAutoPan" name="AutoPan" data-dojo-type="dijit/form/CheckBox" checked /><label for="chkAutoPan"><small>&nbsp;Auto Pan</small></label></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    </br>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="MODEBASIC">
+            <tr>
+                <td>
+                    <div style="display: inline; line-height: 200%;" ><strong>Mode:</strong></div>
+                </td>
+                <td>
+                    <div style="display: inline" id="cmbModeBasic" data-dojo-type="dojox.form.Select"></div>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="MODEADVANCED" style="display: none;">
+          <tr>
+              <td>
+                  <div style="display: inline; line-height: 200%;" ><strong>Mode:</strong></div>
+              </td>
+              <td>
+                  <div style="display: inline" id="cmbMode" data-dojo-type="dojox.form.Select"></div>
+              </td>
+          </tr>
+        </tbody>
+        <tr>
+            <td>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="display: inline; line-height: 200%;" ><strong>Direction:</strong></div>
+            </td>
+            <td>
+                <div style="display: inline" id="cmbDirection" data-dojo-type="dojox.form.Select"></div>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td style="vertical-align:top" width="50%">
+                <div><strong>Year:</strong></div>
+                <div id="divYearSection"></div>
+                <br/>
+                <div><strong>Season:</strong></div>
+                <div id="divSeasonSection"></div>
+            </td>
+            <td style="vertical-align:top" width="50%">
+                <div><strong>Day-of-Week Group:</strong></div>
+                <div id="divDayTypeSection"></div>
+                <br/>
+                <div><strong>Period:</strong></div>
+                <div id="divDayPartSection"></div>
+                <br/>
+                <div ><strong>Map Display Values:</strong></div>
+                <div id="divVolumeOrPercentSection"></div>
+                <br/><div id="Labels"      style="text-align: right; padding: 1px; display: inline; line-height: 150%;"><input type="checkbox" id="chkLabels"        name="Labels"   data-dojo-type="dijit/form/CheckBox" checked /><label for="chkLabels"><small>&nbsp;Show Labels</small></label></div>
+                <br/><div id="Intrazonals" style="text-align: right; padding: 1px; display: inline; line-height: 150%;"><input type="checkbox" id="chkIntrazonals"   name="Labels"   data-dojo-type="dijit/form/CheckBox" data-dojo-attach-event="onClick: _updateIntrazonals"checked /><label for="chkIntrazonals"><small>&nbsp;Include Trips within<span class="brnospace"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selected District</small></label></div>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <div id="divLegendArea">
+        <table id="tableFY" width="100%;">
+            <tbody>
+                <tr>
+                    <td colspan=9 align="center">
+                        <div id="LegendName" class="thick thicker">Legend</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="9.8%"><div id="divColor1">&nbsp;</div></td>
+                    <td width="9.8%"><div id="divColor2">&nbsp;</div></td>
+                    <td width="9.8%"><div id="divColor3">&nbsp;</div></td>
+                    <td width="9.8%"><div id="divColor4">&nbsp;</div></td>
+                    <td width="9.8%"><div id="divColor5">&nbsp;</div></td>
+                    <td width="9.8%"><div id="divColor6">&nbsp;</div></td>
+                    <td width="9.8%"><div id="divColor7">&nbsp;</div></td>
+                    <td width="9.8%"><div id="divColor8">&nbsp;</div></td>
+                    <td width="9.8%"><div id="divColor9">&nbsp;</div></td>
+                </tr>
+                <tr>
+                    <td colspan=3><small>low</small></td>
+                    <td colspan=3 align="center"><small>&nbsp;</small></td>
+                    <td colspan=3 align="right"><small>high</small></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h3>Layer Transparency: <div id="opa" style="display: inline"></div></h3>
+    <div id="horizSlider"></div>
+    <br/>
+    <hr/>
+    <table width="100%">
+      <tr>
+        <td rowspan="2" style="background-color: rgb(255, 255,   0);">
+          &nbsp;&nbsp;&nbsp;
+        </td>
+        <td rowspan="2">
+          &nbsp;
+        </td>
+        <td>
+          <div id="TOTALTRIPSNAME" class="medium"></div>
+        </td>
+        <td align="right">
+          <div id="TOTALTRIPS" class="large"></div>
+        </td>
+        <td rowspan="2">
+          &nbsp;
+        </td>
+        <td rowspan="2" style="background-color: rgb(255, 255,   0);">
+          &nbsp;&nbsp;&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div id="TOTALTRIPSFINE">&nbsp;</div>
+        </td>
+      </tr>
+    </table>
+    <hr/>
+    <br/>
+    <table width="330px;">
+        <tbody id="CHARTSBASIC">
+            <tr>
+                <td>
+                    Charts for the<br/>selected district: 
+                </td>
+                <td width="230px;">
+                    <div style="display: inline" id="cmbChartBasic" data-dojo-type="dojox.form.Select"></div>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="CHARTSADVANCED" style="display:none;">
+            <tr>
+                <td>
+                    Charts for the<br/>selected district: 
+                </td>
+                <td width="230px;">
+                    <div style="display: inline" id="cmbChart" data-dojo-type="dojox.form.Select"></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="MonVol" style="display:block;">
+        <table width="330px;">
+            <tr>
+                <td align="center">
+                    <div id="monvolTitle"   ></div>
+                    <div id="monvolSubtitle"></div>
+                </td>
+            </tr>
+        </table>
+        <div id="chart_MonVol"></div>
+        <div id="legendMonVol"></div>
+    </div>
+    <div id="TODVol" style="display:block;">
+        <table width="330px;">
+            <tr>
+                <td align="center">
+                    <div id="todvolTitle"   ></div>
+                    <div id="todvolSubtitle"></div>
+                </td>
+            </tr>
+        </table>
+        <div id="chart_TODVol"></div>
+        <div id="legendTODVol"></div>
+    </div>
+    <div id="MonMod" style="display:block;">
+        <table width="330px;">
+            <tr>
+                <td align="center">
+                    <div id="monmodTitle"   ></div>
+                    <div id="monmodSubtitle"></div>
+                </td>
+            </tr>
+        </table>
+        <div id="chart_MonMod"></div>
+        <div id="legendMonMod"></div>
+    </div>
+    <div id="TODMod" style="display:block;">
+        <table width="330px;">
+            <tr>
+                <td align="center">
+                    <div id="todmodTitle"   ></div>
+                    <div id="todmodSubtitle"></div>
+                </td>
+            </tr>
+        </table>
+        <div id="chart_TODMod"></div>
+        <div id="legendTODMod"></div>
+    </div>
+    <br/>
+    <div id="NOTEADVANCED" style="display:none;">Note: StreetLight changed bicycle trip methodology in November of 2021.</div>
+</div>

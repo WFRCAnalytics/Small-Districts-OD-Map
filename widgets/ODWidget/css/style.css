@@ -1,0 +1,17 @@
+
+div.clickablepointer {
+  cursor: pointer;
+}
+.brnospace {
+  display: block;
+  margin-bottom: -.5em;
+}
+
+
+div.medium {
+  font-size: 12px;
+}
+
+div.large {
+  font-size: 16px;
+}

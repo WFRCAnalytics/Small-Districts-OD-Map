@@ -1,0 +1,16 @@
+[
+ {"value":"YR","label":"All Year"   ,"seasongroup":"Annual"    ,"transit":"no" },
+ {"value":"01","label":"January"    ,"seasongroup":"Monthly"   ,"transit":"no" },
+ {"value":"02","label":"February"   ,"seasongroup":"Monthly"   ,"transit":"no" },
+ {"value":"03","label":"March"      ,"seasongroup":"Monthly"   ,"transit":"no" },
+ {"value":"04","label":"April"      ,"seasongroup":"Monthly"   ,"transit":"yes"},
+ {"value":"05","label":"May"        ,"seasongroup":"Monthly"   ,"transit":"yes"},
+ {"value":"06","label":"June"       ,"seasongroup":"Monthly"   ,"transit":"no"},
+ {"value":"07","label":"July"       ,"seasongroup":"Monthly"   ,"transit":"no" },
+ {"value":"08","label":"August"     ,"seasongroup":"Monthly"   ,"transit":"no" },
+ {"value":"09","label":"September"  ,"seasongroup":"Monthly"   ,"transit":"yes"},
+ {"value":"10","label":"October"    ,"seasongroup":"Monthly"   ,"transit":"yes"},
+ {"value":"11","label":"November"   ,"seasongroup":"Monthly"   ,"transit":"no" },
+ {"value":"12","label":"December"   ,"seasongroup":"Monthly"   ,"transit":"no" },
+ {"value":"BM","label":"Bike Months (Apr-Oct)","seasongroup":"BikeMonths","transit":"no" }
+]
